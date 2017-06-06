@@ -40,6 +40,7 @@ http://82.207.107.126:13541/SimpleRIDE/LET/SM.WebApi/api - base URL LET
 # ROUTE_MONITORING = BASE_URL + '/RouteMonitoring/?code=C2|'
 
 
+# export APP_SETTINGS="config.DevelopmentConfig"
 
 
 import os
@@ -53,6 +54,7 @@ class Config(object):
 
     DATABASE_URL = 'transport_app'
 
+
 class DevelopmentConfig(Config):
     DEVELOPMENT = True
     DEBUG = True
@@ -60,7 +62,3 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     DEBUG = False
-
-
-# export APP_SETTINGS="config.DevelopmentConfig"
-# export DATABASE_URL="postgresql://witness:street@localhost/street_witness"

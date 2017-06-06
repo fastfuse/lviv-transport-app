@@ -20,13 +20,6 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/stops')
-def stops():
-    stops = db['stops'].find()
-    public = list(map(utils.make_public, stops))
-    return jsonify(count=len(public), stops=public)
-
-
 class RoutesAPI(MethodView):
     """
     Transport API
